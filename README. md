@@ -1,0 +1,149 @@
+PORTOFOLIO PEMROGRAMAN BERORIENTASI OBJEK (PBO)
+
+Simulasi Percakapan dan Rencana Liburan ke Dufan Menggunakan Python
+
+1. Identitas
+
+- Nama: Esta lutfiah
+- NIM: 14022500132
+- Kelas: 3B Sistem Informasi
+- Mata Kuliah: Pemrograman Berorientasi Objek (PBO)
+
+---
+
+2. Pendahuluan
+
+Pemrograman Berorientasi Objek atau Object-Oriented Programming (OOP) merupakan metode pemrograman yang menggunakan objek sebagai dasar dalam pembuatan program.
+
+Pada program ini, konsep PBO diterapkan untuk membuat simulasi percakapan antara dua orang teman, yaitu Esta dan Lutfia, yang sedang merencanakan liburan ke Dunia Fantasi (Dufan).
+
+Program ini dibuat menggunakan bahasa Python dengan menerapkan konsep class, object, constructor, attribute, dan method. Selain itu, program juga dapat menyimpan daftar wahana serta menghitung estimasi biaya liburan per orang.
+
+3. Tujuan Program
+
+Tujuan pembuatan program ini adalah:
+
+1. Memahami konsep dasar Pemrograman Berorientasi Objek.
+2. Memahami penggunaan class dan object dalam Python.
+3. Memahami penggunaan constructor "__init__()".
+4. Menerapkan attribute dan method dalam sebuah objek.
+5. Membuat simulasi percakapan menggunakan program Python.
+6. Menghitung estimasi biaya liburan secara otomatis.
+
+4. Konsep PBO yang Digunakan
+
+A. Class
+
+Class merupakan cetakan atau blueprint untuk membuat objek.
+
+Pada program ini terdapat dua class, yaitu:
+
+- "TemanCewek": digunakan untuk membuat objek teman yang memiliki nama dan karakter.
+- "RencanaDufan": digunakan untuk mengelola rencana liburan, daftar wahana, dan total biaya.
+
+B. Object
+
+Object merupakan hasil pembuatan dari sebuah class.
+
+Contoh objek pada program:
+
+esta = TemanCewek("Esta", "Si Paling Semangat")
+lutfia = TemanCewek("Lutfia", "Si Penakut & Penasaran")
+
+Dari kode tersebut dibuat dua objek, yaitu Esta dan Lutfia.
+
+C. Constructor
+
+Constructor adalah method khusus yang dijalankan secara otomatis ketika objek dibuat.
+
+Contoh:
+
+def __init__(self, nama, karakter):
+    self.nama = nama
+    self.karakter = karakter
+
+Constructor digunakan untuk memberikan nilai awal pada atribut nama dan karakter.
+
+D. Attribute
+
+Attribute merupakan variabel yang dimiliki oleh objek.
+
+Contoh attribute pada class "TemanCewek":
+
+- "self.nama"
+- "self.karakter"
+
+Sedangkan pada class "RencanaDufan" terdapat:
+
+- "self.hari"
+- "self.daftar_wahana"
+- "self.total_biaya"
+
+E. Method
+
+Method merupakan fungsi yang berada di dalam class dan digunakan untuk menjalankan suatu tindakan.
+
+Method yang digunakan dalam program:
+
+Method| Fungsi
+"bicara()"| Menampilkan dialog percakapan
+"tambah_wahana()"| Menambahkan wahana ke daftar rencana
+"hitung_budget()"| Menghitung total biaya liburan
+
+5. Penjelasan Program
+
+Program ini memiliki beberapa bagian utama.
+
+A. Class TemanCewek
+
+Class ini digunakan untuk membuat objek teman yang memiliki nama dan karakter.
+
+Method "bicara()" berfungsi menampilkan percakapan dengan format nama dan dialog. Program menggunakan "time.sleep(1)" agar setiap percakapan memiliki jeda satu detik.
+
+B. Class RencanaDufan
+
+Class ini digunakan untuk menyimpan rencana liburan.
+
+Atribut "daftar_wahana" digunakan untuk menyimpan wahana yang ingin dikunjungi, sedangkan "total_biaya" digunakan untuk menyimpan hasil perhitungan biaya.
+
+C. Simulasi Percakapan
+
+Percakapan dimulai ketika Esta mengajak Lutfia pergi ke Dufan. Mereka kemudian menentukan wahana yang akan dikunjungi, transportasi, dan estimasi biaya liburan.
+
+D. Perhitungan Budget
+
+Program menghitung biaya liburan dengan rumus:
+
+Total Budget = Tiket + Makan + Transportasi
+
+Perhitungannya:
+
+- Tiket: Rp280.000
+- Makan: Rp70.000
+- Transportasi: Rp40.000
+
+Total biaya:
+
+Rp280.000 + Rp70.000 + Rp40.000 = Rp390.000 per orang
+
+6. Hasil Output Program
+
+Output program menampilkan percakapan antara Esta dan Lutfia serta rekap rencana liburan.
+
+Contoh hasil rekap:
+
+========================================
+📌 REKAP RENCANA DUFAN (BERDUA)
+========================================
+Personel     : Esta (Si Paling Semangat) & Lutfia (Si Penakut & Penasaran)
+Hari         : Sabtu
+Target Wahana: Bianglala, Istana Boneka, Kora-Kora
+Total Budget : Rp390,000 / orang
+
+7. Kesimpulan
+
+Berdasarkan program yang telah dibuat, dapat disimpulkan bahwa konsep Pemrograman Berorientasi Objek dapat diterapkan dalam kehidupan sehari-hari, salah satunya untuk membuat simulasi percakapan dan perencanaan kegiatan.
+
+Penggunaan class dan object membuat program lebih terstruktur. Method juga membantu memisahkan fungsi program, seperti menampilkan percakapan, menambahkan wahana, dan menghitung biaya.
+
+Dengan program ini, saya dapat memahami penerapan dasar PBO menggunakan Python secara lebih praktis dan mudah dipahami.

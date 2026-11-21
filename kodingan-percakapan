@@ -1,0 +1,83 @@
+import time
+
+class TemanCewek:
+    def __init__(self, nama, karakter):
+        self.nama = nama
+        self.karakter = karakter # Tetap disimpan di dalam atribut OOP
+
+    # Method untuk menampilkan percakapan langsung tanpa sebutan karakter di output
+    def bicara(self, dialog):
+        print(f"{self.nama}:")
+        print(f"  \"{dialog}\"\n")
+        time.sleep(1)
+
+
+class RencanaDufan:
+    def __init__(self, hari):
+        self.hari = hari
+        self.daftar_wahana = []
+        self.total_biaya = 0
+
+    def tambah_wahana(self, wahana):
+        self.daftar_wahana.append(wahana)
+
+    def hitung_budget(self, tiket, makan, transport):
+        self.total_biaya = tiket + makan + transport
+        return self.total_biaya
+
+
+# ==========================================
+# SIMULASI PERCAKAPAN LANGSUNG (TATAP MUKA)
+# ==========================================
+
+# Karakter tetap ada di dalam objek Python
+esta = TemanCewek("Esta", "Si Paling Semangat")
+lutfia = TemanCewek("Lutfia", "Si Penakut & Penasaran")
+
+rencana = RencanaDufan("Sabtu")
+
+print("=== PERCAKAPAN LANGSUNG: ESTA & LUTFIA ===\n")
+
+# Alur Percakapan
+esta.bicara("Fiaa, weekend besok ada acara ga? gabut banget nih, jalan yuk!")
+
+lutfia.bicara("Belum ada sih taa. mau jalan ke mana emang? jangan ke mall lagi ya, bosen banget.")
+
+esta.bicara("Nah pas banget! gimana kalau kita ke Dufan aja? udah lama banget ga main ke sana.")
+
+lutfia.bicara("Dufan? boleh sih... tapi jujurly gue agak trauma naik wahana yang ekstrem-ekstrem gitu")
+
+esta.bicara("Tenang aja, ga bakal aku paksa kok. kita naik yang santai-santai aja dulu kayak bianglala sama Istana Boneka.")
+rencana.tambah_wahana("Bianglala")
+rencana.tambah_wahana("Istana Boneka")
+
+lutfia.bicara("Nah kalau itu aku mau! tapi minimal sekali cobain Kora-Kora deh, penasaran tapi takut wkwk.")
+rencana.tambah_wahana("Kora-Kora")
+
+esta.bicara("Wkwk nah gitu dong! deal ya, Kora-Kora masuk list. nanti kalau ketakutan tinggal merem aja.")
+
+lutfia.bicara("Btw tiketnya berapaan sekarang taa? terus ke sananya kita naik apa nih?")
+
+esta.bicara("Tiket weekend sekitar 280 rb. ke sananya kita patungan gocar aja dari rumah aku biar ga cape di jalan.")
+
+# Perhitungan Budget
+total = rencana.hitung_budget(280000, 70000, 40000)
+
+lutfia.bicara(f"Oke, berarti siapin budget sekitar Rp{total:,} ya per orang.")
+
+esta.bicara("Yup betul. jangan lupa bawa baju ganti sama sunscreen ya! beli tiketnya sekarang aja di web biar ga kehabisan.")
+
+lutfia.bicara("Okay, aku pesen tiketnya sekarang. sabtu jam 7 pagi aku udah nyampe rumah kamu ya!")
+
+esta.bicara("Okay beres, see you sabtu Fiaa!")
+
+# ==========================================
+# REKAP RENCANA
+# ==========================================
+print("=" * 40)
+print("📌 REKAP RENCANA DUFAN (BERDUA)")
+print("=" * 40)
+print(f"Personel     : {esta.nama} ({esta.karakter}) & {lutfia.nama} ({lutfia.karakter})")
+print(f"Hari         : {rencana.hari}")
+print(f"Target Wahana: {', '.join(rencana.daftar_wahana)}")
+print(f"Total Budget : Rp{rencana.total_biaya:,} / orang")

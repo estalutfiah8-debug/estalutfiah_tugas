@@ -1,0 +1,49 @@
+class iphon:
+    pass
+class hp:
+    pass
+
+iphon1 = iphon()
+iphon2 = iphon()
+
+print(type(iphon1))
+print(type(iphon2))
+
+hp1 = hp()
+hp2 = hp()
+
+print(type(hp1))
+print(type(hp2))
+
+class Mahasiswa :
+    nim = 0
+    nama = ""
+
+    def perkenalan(self):
+        print(f"halo nama saya {self.nama}")
+
+    def hello (self, nama):
+        print(f"hello {nama},nama saya {self.nama}")
+
+
+mahasiswa = Mahasiswa()
+mahasiswa.nama = "esta"
+mahasiswa.perkenalan()
+mahasiswa.hello("queen")
+
+
+#instance atribute
+
+mahasiswa1 = Mahasiswa()
+mahasiswa1.nim = 123456
+mahasiswa1.nama = "esta"
+
+print(mahasiswa1.nim)
+print(mahasiswa1.nama)
+
+mahasiswa2 = Mahasiswa()
+mahasiswa2.nim = ("123456")
+mahasiswa2.nama = "queen"
+
+print(mahasiswa2.nim)
+print(mahasiswa2.nama)
